@@ -1,0 +1,242 @@
+{
+    "privileges": [],
+    "dataRoles": [
+        {
+            "displayName": "Temporal",
+            "name": "group",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Measures",
+            "name": "measures",
+            "kind": "Measure",
+            "requiredTypes": [
+                {
+                    "numeric": true
+                }
+            ]
+        }
+    ],
+    "drilldown": {
+        "roles": ["group"]
+    },
+    "objects": {
+        "legend": {
+            "displayName": "Legend",
+            "properties": {
+                "fontSize": {
+                    "displayName": "Font Size (px)",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "spacing": {
+                    "displayName": "Spacing (px)",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "width": {
+                    "displayName": "Width (%)",
+                    "type": {
+                        "numeric": true
+                    }
+                }
+            }
+        },
+        "axis": {
+            "displayName": "Axis",
+            "properties": {
+                "fontSize": {
+                    "displayName": "Font Size (px)",
+                    "type": {
+                        "numeric": true
+                    }
+                }
+            }
+        },
+        "tooltip": {
+            "displayName": "Tooltip",
+            "properties": {
+                "fontSize": {
+                    "displayName": "Font Size (px)",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "opacity": {
+                    "displayName": "Opacity (%)",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "panelGap": {
+                    "displayName": "Panel Gap (px)",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "padding": {
+                    "displayName": "Padding (px)",
+                    "type": {
+                        "numeric": true
+                    }
+                }
+            }
+        },
+        "dataPoint": {
+            "displayName": "Data Point",
+            "properties": {
+                "dataPoint": {
+                    "displayName": "Data Point Dot",
+                    "type": {
+                        "bool": true
+                    }
+                }
+            }
+        },
+        "staticPanel": {
+            "displayName": "Panel Width",
+            "properties": {
+                "width1": {
+                    "displayName": "Width 1 (%)",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "width2": {
+                    "displayName": "Width 2 (%)",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "width3": {
+                    "displayName": "Width 3 (%)",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "width4": {
+                    "displayName": "Width 4 (%)",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "width5": {
+                    "displayName": "Width 5 (%)",
+                    "type": {
+                        "numeric": true
+                    }
+                }
+            }
+        },
+        "panel": {
+            "displayName": "Panels",
+            "properties": {
+                "panel": {
+                    "type": {
+                        "enumeration": [
+                            { "displayName": "1", "value": "1" },
+                            { "displayName": "2", "value": "2" },
+                            { "displayName": "3", "value": "3" },
+                            { "displayName": "4", "value": "4" },
+                            { "displayName": "5", "value": "5" }
+                        ]
+                    }
+                }
+            }
+        },
+        "xAxis": {
+            "displayName": "X Axis",
+            "properties": {
+                "offset": {
+                    "type": {
+                        "enumeration": [
+                            { "displayName": "Offset 0", "value": "0" },
+                            { "displayName": "Offset 1", "value": "1" },
+                            { "displayName": "Offset 2", "value": "2" }
+                        ]
+                    }
+                },
+                "inverse": {
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "mmOverride": {
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "mmMin": {
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "mmMax": {
+                    "type": {
+                        "numeric": true
+                    }
+                }
+            }
+        },
+        "series": {
+            "displayName": "Series",
+            "properties": {
+                "color": {
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "area": {
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "areaOpacity": {
+                    "type": {
+                        "numeric": true
+                    }
+                }
+            }
+        }
+    },
+    "dataViewMappings": [
+        {
+            "conditions": [
+                {
+                    "group": {
+                        "min": 1,
+                        "max": 1
+                    },
+                    "measures": {}
+                }
+            ],
+            "table": {
+                "rows": {
+                    "select": [
+                        {
+                            "bind": {
+                                "to": "group"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "measures"
+                            }
+                        }
+                    ]
+                },
+                "dataReductionAlgorithm": {
+                    "top": {
+                        "count": 30000
+                    }
+                }
+            }
+        }
+    ]
+}

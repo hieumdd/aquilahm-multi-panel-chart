@@ -1,0 +1,20 @@
+{
+    "visual": {
+        "name": "aquilahm-multi-panel-chart",
+        "displayName": "Aquilahm Multi Panel Chart",
+        "guid": "aquilahmMmultiPanelChart684C09788F0D4F63B851AA5ED5F8782C",
+        "visualClassName": "Visual",
+        "version": "0.1.0",
+        "description": "Multi Panel Chart - Custom Visual for Power BI",
+        "supportUrl": "https://github.com/hieumdd/multi-panel-chart",
+        "gitHubUrl": "https://github.com/hieumdd/multi-panel-chart"
+    },
+    "apiVersion": "5.2.0",
+    "author": { "name": "HM", "email": "hieumdd@gmail.com" },
+    "assets": { "icon": "assets/icon.png" },
+    "externalJS": [],
+    "style": "style/visual.less",
+    "capabilities": "capabilities.json",
+    "dependencies": null,
+    "stringResources": []
+}
